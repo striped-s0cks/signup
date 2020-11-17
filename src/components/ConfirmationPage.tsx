@@ -1,0 +1,25 @@
+import * as React from 'react';
+import { Form } from './Form';
+import { User } from './types';
+
+export interface StateProps {
+    user: User;
+}
+
+export class ConfirmationPage extends React.Component<StateProps> {
+    render() {
+        const { user } = this.props;
+        return (
+            <div className='ConfirmationPage'>
+                <Form
+                    headline1='Welcome'
+                    headline2={`${user.firstName}!`}
+                    text='You have been registered for this awesome service. Please check your email listed below for instructions.'
+                    buttonLabel='Sign In'
+                >
+                    {user.email}
+                </Form>
+            </div>
+        );
+    }
+}
