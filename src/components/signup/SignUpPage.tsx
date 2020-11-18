@@ -49,7 +49,7 @@ export class SignUpPage extends React.Component<DispatchProps & RouteComponentPr
             <div className='SignUpPage'>
                 <Form
                     headline1="Let's"
-                    headline2='Sign up'
+                    headline2='Sign Up'
                     text="Use the form below to sign up for this super  awesome service. You're only a few steps away!"
                     buttonLabel='Sign Up'
                     disabled={!this._isFormComplete()}
