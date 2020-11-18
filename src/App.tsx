@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Provider } from 'react-redux';
 import { Redirect, Route, RouteProps, Switch } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { reducers } from './components/reducers';
 
@@ -19,7 +19,7 @@ export class App extends React.Component<RouteProps> {
     render() {
         return (
             <div className='App'>
-                <BrowserRouter>
+                <HashRouter>
                     <Provider store={createStore(reducers)}>
                         <Switch>
                             <Route exact path='/'>
@@ -29,7 +29,7 @@ export class App extends React.Component<RouteProps> {
                             <Route path={Paths.confirmation} component={ConfirmationPageContainer} />
                         </Switch>
                     </Provider>
-                </BrowserRouter>
+                </HashRouter>
             </div>
         );
     }
