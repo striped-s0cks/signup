@@ -8,7 +8,7 @@ interface Props {
     headline2: string;
     text: string;
     buttonLabel: string;
-    isButtonDisabled?: boolean;
+    disabled?: boolean;
     onClick?: () => void;
 }
 
@@ -17,17 +17,19 @@ export class Form extends React.Component<Props> {
         return (
             <div className='form'>
                 <div className='header'>
-                    {this.props.headline1}
-                    <span className='bold'>{this.props.headline2}</span>
+                    <div>{this.props.headline1}</div>
+                    <div className='bold'>{this.props.headline2}</div>
                 </div>
 
                 <div className='text'>{this.props.text}</div>
 
-                {this.props.children}
+                <div className='body'>
+                    {this.props.children}
+                </div>
 
                 <PrimaryButton
                     text={this.props.buttonLabel}
-                    disabled={this.props.isButtonDisabled}
+                    disabled={this.props.disabled}
                     onClick={this.props.onClick}
                 />
             </div>
