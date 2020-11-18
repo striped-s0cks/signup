@@ -19,7 +19,9 @@ export class ConfirmationPage extends React.Component<StateProps> {
                     text='You have been registered for this awesome service. Please check your email listed below for instructions.'
                     buttonLabel='Sign In'
                 >
-                    {user.email}
+                    <div className='email'>
+                        {user.email}
+                    </div>
                 </Form>
             </div>
         );
