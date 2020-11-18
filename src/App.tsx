@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Provider } from 'react-redux';
-import { Redirect, Route, RouteProps } from 'react-router';
+import { Redirect, Route, RouteProps, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { reducers } from './components/reducers';
@@ -21,9 +21,13 @@ export class App extends React.Component<RouteProps> {
             <div className='App'>
                 <BrowserRouter>
                     <Provider store={createStore(reducers)}>
-                        <Redirect from='/' to={Paths.signup} />
-                        <Route path={Paths.signup} component={SignUpPageContainer} />
-                        <Route path={Paths.confirmation} component={ConfirmationPageContainer} />
+                        <Switch>
+                            <Route exact path='/'>
+                                <Redirect to={Paths.signup} />
+                            </Route>
+                            <Route path={Paths.signup} component={SignUpPageContainer} />
+                            <Route path={Paths.confirmation} component={ConfirmationPageContainer} />
+                        </Switch>
                     </Provider>
                 </BrowserRouter>
             </div>
