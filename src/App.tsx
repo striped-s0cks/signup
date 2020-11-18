@@ -22,11 +22,9 @@ export class App extends React.Component<RouteProps> {
                 <HashRouter>
                     <Provider store={createStore(reducers)}>
                         <Switch>
-                            <Route exact path='/'>
-                                <Redirect to={Paths.signup} />
-                            </Route>
                             <Route path={Paths.signup} component={SignUpPageContainer} />
                             <Route path={Paths.confirmation} component={ConfirmationPageContainer} />
+                            <Redirect to={Paths.signup} />
                         </Switch>
                     </Provider>
                 </HashRouter>
