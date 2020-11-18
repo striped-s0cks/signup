@@ -74,6 +74,7 @@ export class SignUpPage extends React.Component<DispatchProps & RouteComponentPr
                     <TextField
                         required
                         borderless
+                        type='password'
                         label='Password'
                         value={this.state.password}
                         onChange={(_ev, password = '') => this.setState({password})}
