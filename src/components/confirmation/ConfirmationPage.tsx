@@ -14,7 +14,7 @@ export class ConfirmationPage extends React.Component<StateProps> {
         return (
             <div className='ConfirmationPage'>
                 <Form
-                    headline1='Welcome'
+                    headline1='Welcome,'
                     headline2={`${user.firstName}!`}
                     text='You have been registered for this awesome service. Please check your email listed below for instructions.'
                     buttonLabel='Sign In'
