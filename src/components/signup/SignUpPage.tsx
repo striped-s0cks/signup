@@ -56,7 +56,6 @@ export class SignUpPage extends React.Component<DispatchProps & RouteComponentPr
                     onClick={this._createUser}
                 >
                     <TextField
-                        required
                         borderless
                         label='First Name'
                         value={this.state.firstName}
@@ -64,7 +63,6 @@ export class SignUpPage extends React.Component<DispatchProps & RouteComponentPr
                     />
 
                     <TextField
-                        required
                         borderless
                         label='Email Address'
                         value={this.state.email}
@@ -72,7 +70,6 @@ export class SignUpPage extends React.Component<DispatchProps & RouteComponentPr
                     />
 
                     <TextField
-                        required
                         borderless
                         type='password'
                         label='Password'
