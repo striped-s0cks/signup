@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { Form } from './Form';
-import { User } from './types';
+import { Form } from '../shared/Form';
+import { User } from '../types';
+
+import './ConfirmationPage.scss';
 
 export interface StateProps {
     user: User;

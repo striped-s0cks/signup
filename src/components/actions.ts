@@ -1,4 +1,3 @@
-import { Dispatch } from "redux";
 import { User } from "./types";
 
 export const actionTypes = {
@@ -11,15 +10,7 @@ export interface SetUserAction {
 }
 
 export const actions = {
-    createUser(firstName: string, email: string, _password: string, callback?: () => void) {
-        return (dispatch: Dispatch) => {
-            // .... send all the info to server and let it do its magic .....
-            dispatch(actions.setUser(firstName, email));
-            callback && callback();
-        };
-    },
-
-    setUser(firstName: string, email: string): SetUserAction {
+    createUser(firstName: string, email: string, _password: string): SetUserAction {
         return {
             type: actionTypes.SetUser,
             user: {
@@ -27,5 +18,5 @@ export const actions = {
                 email,
             },
         };
-    }
+    },
 };

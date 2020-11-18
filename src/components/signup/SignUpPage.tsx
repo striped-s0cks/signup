@@ -1,8 +1,8 @@
 import { TextField } from 'office-ui-fabric-react';
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { Paths } from '../App';
-import { Form } from './Form';
+import { Paths } from '../../App';
+import { Form } from '../shared/Form';
 
 import './SignUpPage.scss';
 
@@ -27,7 +27,7 @@ export class SignUpPage extends React.Component<DispatchProps & RouteComponentPr
         };
     }
 
-    private _createUser(): void {
+    private _createUser = (): void => {
         this.props.createUser(
             this.state.firstName,
             this.state.email,

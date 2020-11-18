@@ -4,10 +4,11 @@ import { Redirect, Route, RouteProps } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { reducers } from './components/reducers';
-import { SignUpPageContainer } from './components/SignUpPageContainer';
+
+import { SignUpPageContainer } from './components/signup/SignUpPageContainer';
+import { ConfirmationPageContainer } from './components/confirmation/ConfirmationPageContainer';
 
 import './App.scss';
-import { ConfirmationPageContainer } from './components/ConfirmationPageContainer';
 
 export const Paths = {
     signup: '/signup',
