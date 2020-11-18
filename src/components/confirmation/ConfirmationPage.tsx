@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { Redirect } from 'react-router';
+import { Paths } from '../../App';
 import { Form } from '../shared/Form';
 import { User } from '../types';
 
@@ -11,6 +13,11 @@ export interface StateProps {
 export class ConfirmationPage extends React.Component<StateProps> {
     render() {
         const { user } = this.props;
+
+        if (!user) {
+            return <Redirect to={Paths.signup} />
+        }
+        
         return (
             <div className='ConfirmationPage'>
                 <Form
