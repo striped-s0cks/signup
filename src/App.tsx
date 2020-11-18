@@ -11,8 +11,8 @@ import { ConfirmationPageContainer } from './components/confirmation/Confirmatio
 import './App.scss';
 
 export const Paths = {
-    signup: '/signup/signup',
-    confirmation: '/signup/confirmation',
+    signup: '/signup',
+    confirmation: '/confirmation',
 };
 
 export class App extends React.Component<RouteProps> {
